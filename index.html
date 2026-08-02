@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stanton Strategy Partners | Business Strategy & Executive Advisory</title>
+  <meta name="description" content="Stanton Strategy Partners is a premier management consulting firm advising Fortune 500 executives, private equity boards, and global enterprises on corporate strategy, M&A advisory, and digital transformation.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Header Nav -->
+  <header id="site-header" class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Stanton Strategy Partners Home">
+        <div class="logo-mark">S</div>
+        <div class="brand-name">
+          <span class="brand-title">STANTON</span>
+          <span class="brand-subtitle">STRATEGY PARTNERS</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="approach.html" class="nav-link">Approach</a></li>
+          <li><a href="insights.html" class="nav-link">Insights</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Request Consultation</a>
+        <button id="hamburger-toggle" class="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Video Background Hero Section -->
+    <section class="hero">
+      <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/images/hero-boardroom.png">
+        <source src="assets/videos/198918-909322169_medium.mp4" type="video/mp4">
+        <source src="assets/videos/2340-157269921_medium.mp4" type="video/mp4">
+      </video>
+      <div class="hero-bg-overlay"></div>
+      
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow light">Strategic Advisory & Value Creation</span>
+          <h1>Navigating Complexity. <span class="gold">Architecting Advantage.</span></h1>
+          <p class="hero-subtitle">We partner with chief executives, enterprise boards, and visionary investors to solve mission-critical strategic challenges and unlock sustainable enterprise value.</p>
+          <div class="hero-cta">
+            <a href="contact.html" class="btn btn-primary">Request Consultation <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="services.html" class="btn btn-outline-light">Explore Our Services</a>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero-boardroom.png" alt="Executive Strategy Boardroom Session at Stanton Strategy Partners">
+            <button class="video-play-trigger play-video-trigger" aria-label="Play Executive Briefing Video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+          </div>
+          <div class="hero-badge-floating">
+            <div class="hero-badge-number">$14B+</div>
+            <div class="hero-badge-text">Strategic Enterprise Value Created</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- At a Glance Stat Strip -->
+    <section class="stat-strip">
+      <div class="container">
+        <div class="stat-grid">
+          <div class="stat-item reveal">
+            <div class="stat-number">$14B<span class="accent">+</span></div>
+            <div class="stat-label">Enterprise value created through M&A and corporate turnarounds</div>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-number">98.4<span class="accent">%</span></div>
+            <div class="stat-label">Executive client retention and recurring strategic advisory rate</div>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-number">42</div>
+            <div class="stat-label">Global markets across North America, Europe, Asia, and Middle East</div>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-number">25<span class="accent">+</span></div>
+            <div class="stat-label">Years of elite strategic consulting leadership and industry governance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accenture-Inspired Interactive Enterprise ROI Calculator -->
+    <section class="roi-calculator-section">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="eyebrow">Enterprise Value Engine</span>
+          <h2 style="color: var(--color-white);">Quantify Your Strategic Value Potential</h2>
+          <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Select your enterprise scale and mandate focus to estimate potential EBITDA growth and value creation metrics.</p>
+        </div>
+
+        <div class="roi-card reveal">
+          <div class="roi-grid">
+            <div class="roi-inputs">
+              <div class="roi-field">
+                <label for="roi-industry-select">Industry Sector</label>
+                <select id="roi-industry-select" class="roi-select">
+                  <option value="private-equity">Private Equity & Portfolio Companies</option>
+                  <option value="healthcare">Healthcare & Life Sciences</option>
+                  <option value="tech">Technology, Media & Telecommunications</option>
+                  <option value="industrials">Industrial Goods & Advanced Manufacturing</option>
+                  <option value="energy">Energy & Infrastructure</option>
+                </select>
+              </div>
+
+              <div class="roi-field">
+                <label for="roi-revenue-select">Annual Enterprise Revenue ($ Millions)</label>
+                <select id="roi-revenue-select" class="roi-select">
+                  <option value="150">$100M - $250M Enterprise</option>
+                  <option value="500" selected>$250M - $1B Mid-Market Leader</option>
+                  <option value="2500">$1B - $5B+ Global Enterprise</option>
+                </select>
+              </div>
+
+              <div class="roi-field">
+                <label for="roi-focus-select">Primary Mandate Focus</label>
+                <select id="roi-focus-select" class="roi-select">
+                  <option value="ma-synergy" selected>M&A Synergy Realization & Due Diligence</option>
+                  <option value="digital-ai">Digital AI & Enterprise Automation</option>
+                  <option value="margin-expansion">Cost Optimization & Margin Expansion</option>
+                  <option value="turnaround">Corporate Turnaround & Restructuring</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="roi-result-box">
+              <span class="roi-result-label">Projected Enterprise Value Created</span>
+              <div id="roi-value-display" class="roi-result-metric">$110.0M+</div>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem;">
+                <div>
+                  <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase;">EBITDA Margin Impact</div>
+                  <div id="roi-ebitda-display" style="font-size: 1.25rem; font-weight: 700; color: var(--color-white); margin-top: 0.25rem;">+4.2% to +6.8%</div>
+                </div>
+                <div>
+                  <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase;">Payback Horizon</div>
+                  <div id="roi-payback-display" style="font-size: 1.25rem; font-weight: 700; color: var(--color-white); margin-top: 0.25rem;">4 - 8 Months</div>
+                </div>
+              </div>
+              
+              <a href="contact.html" class="btn btn-primary" style="margin-top: 1.75rem; width: 100%;">Request Executive Modeling Session <i class="fa-solid fa-calculator"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="eyebrow">Practice Areas</span>
+          <h2>Tailored Strategic Capabilities</h2>
+          <p class="section-subtitle">Combining deep sector expertise with rigorous analytical discipline to address your organization's pivotal decision points.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-chess-king"></i></div>
+            <h3>Corporate Strategy</h3>
+            <p>Formulating growth vector roadmaps, market entry positioning, capital allocation models, and competitive defense strategies for market leadership.</p>
+            <a href="services.html#corporate-strategy" class="service-link">View Practice <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+            <h3>M&A & Transaction Advisory</h3>
+            <p>End-to-end transaction leadership including commercial due diligence, synergy valuation, target identification, and post-merger integration.</p>
+            <a href="services.html#ma-advisory" class="service-link">View Practice <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-chart-line-up"></i></div>
+            <h3>Digital Transformation</h3>
+            <p>Architecting next-generation business models, AI/data infrastructure governance, and legacy system modernization to drive operational agility.</p>
+            <a href="services.html#digital-transformation" class="service-link">View Practice <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>Operational Excellence</h3>
+            <p>Optimizing cost structures, global supply chain resilience, organizational design, and enterprise margin expansion initiatives.</p>
+            <a href="services.html#operational-excellence" class="service-link">View Practice <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strategy&-Inspired Strategy-to-Value Execution Workflow -->
+    <section class="workflow-section">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="eyebrow">Strategy, Made Real</span>
+          <h2>Our Strategy-to-Execution Methodology</h2>
+          <p class="section-subtitle">A proven 4-phase framework engineered to convert high-level strategic vision into quantifiable, bottom-line financial results.</p>
+        </div>
+
+        <div class="workflow-nav reveal">
+          <button class="workflow-tab-btn active" data-step="1">1. Diagnostic Audit</button>
+          <button class="workflow-tab-btn" data-step="2">2. Vector Architecture</button>
+          <button class="workflow-tab-btn" data-step="3">3. Synergy Execution</button>
+          <button class="workflow-tab-btn" data-step="4">4. Value Governance</button>
+        </div>
+
+        <!-- Workflow Step 1 -->
+        <div id="workflow-step-1" class="workflow-card active reveal">
+          <div>
+            <span class="workflow-num">01</span>
+            <h3 style="font-size: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">Strategic & Commercial Diagnostic Audit</h3>
+            <p style="color: var(--color-text-muted); font-size: 1.05rem;">We conduct rigorous, evidence-based assessments of market positioning, cost structures, and competitive moats to establish baseline metrics and unveil hidden enterprise value opportunities.</p>
+            <ul style="margin: 1.5rem 0; font-weight: 600; color: var(--color-primary);">
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Competitive moat benchmarking & market share audit</li>
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> EBITDA leak analysis & operational friction diagnostics</li>
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Customer profitability & product tier margin segmentation</li>
+            </ul>
+          </div>
+          <div>
+            <img src="assets/images/photo-1542744094-24638eff58bb.avif" alt="Strategic Audit Session" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+          </div>
+        </div>
+
+        <!-- Workflow Step 2 -->
+        <div id="workflow-step-2" class="workflow-card reveal">
+          <div>
+            <span class="workflow-num">02</span>
+            <h3 style="font-size: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">Growth Vector & Capital Allocation</h3>
+            <p style="color: var(--color-text-muted); font-size: 1.05rem;">Synthesizing market intelligence to architect high-yield growth vectors, M&A target criteria, and capital deployment prioritization models.</p>
+            <ul style="margin: 1.5rem 0; font-weight: 600; color: var(--color-primary);">
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Organic growth roadmap & market entry positioning</li>
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> M&A pipeline identification & transaction scoring</li>
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Portfolio restructuring & non-core asset divestment</li>
+            </ul>
+          </div>
+          <div>
+            <img src="assets/images/photo-1557804506-669a67965ba0.avif" alt="Capital Allocation Planning" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+          </div>
+        </div>
+
+        <!-- Workflow Step 3 -->
+        <div id="workflow-step-3" class="workflow-card reveal">
+          <div>
+            <span class="workflow-num">03</span>
+            <h3 style="font-size: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">Post-Merger Synergy & Execution</h3>
+            <p style="color: var(--color-text-muted); font-size: 1.05rem;">Deploying embedded executive squads alongside client leadership to drive rapid integration, cost synergy capture, and cultural alignment.</p>
+            <ul style="margin: 1.5rem 0; font-weight: 600; color: var(--color-primary);">
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Day 1 readiness & 100-day value creation playbooks</li>
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> IT infrastructure consolidation & AI deployment</li>
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Commercial team re-alignment & cross-sell acceleration</li>
+            </ul>
+          </div>
+          <div>
+            <img src="assets/images/photo-1523875194681-bedd468c58bf.avif" alt="Execution Management" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+          </div>
+        </div>
+
+        <!-- Workflow Step 4 -->
+        <div id="workflow-step-4" class="workflow-card reveal">
+          <div>
+            <span class="workflow-num">04</span>
+            <h3 style="font-size: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">Boardroom Governance & Value Realization</h3>
+            <p style="color: var(--color-text-muted); font-size: 1.05rem;">Establishing key performance indicator dashboards, risk mitigation protocols, and long-term enterprise value tracking for institutional board audit.</p>
+            <ul style="margin: 1.5rem 0; font-weight: 600; color: var(--color-primary);">
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Real-time executive KPI dashboards</li>
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Enterprise risk governance & regulatory compliance</li>
+              <li><i class="fa-solid fa-check" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Sustainable margin expansion audit</li>
+            </ul>
+          </div>
+          <div>
+            <img src="assets/images/photo-1517245386807-bb43f82c33c4.avif" alt="Boardroom Governance" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BCG-Inspired Thought Leadership Research Hub Preview -->
+    <section class="section-padding" style="background-color: var(--color-white); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header reveal" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="eyebrow">Stanton Executive Institute</span>
+            <h2>Latest Research & Executive Publications</h2>
+          </div>
+          <a href="insights.html" class="btn btn-secondary">Explore Research Library <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="insights-row">
+          <article class="insight-card reveal">
+            <div class="insight-image">
+              <img src="assets/images/insight-hero.png" alt="Strategic Capital Allocation Report">
+              <span class="insight-category-tag">Research Paper</span>
+            </div>
+            <div class="insight-body">
+              <div class="insight-meta">
+                <span><i class="fa-regular fa-calendar"></i> Oct 24, 2026</span>
+                <span>• 12 min read</span>
+              </div>
+              <h3>Navigating Geopolitical Re-alignment in Global Supply Chains</h3>
+              <p class="insight-teaser">How multinational boardrooms are restructuring manufacturing footprints and capital deployment amidst shifting international trade dynamics.</p>
+              <button class="insight-read-more open-insight-modal" style="background: none; border: none; font-family: inherit;">Read Summary <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+
+          <article class="insight-card reveal">
+            <div class="insight-image">
+              <img src="assets/images/hero-boardroom.png" alt="Generative AI Strategy Briefing">
+              <span class="insight-category-tag">Executive Briefing</span>
+            </div>
+            <div class="insight-body">
+              <div class="insight-meta">
+                <span><i class="fa-regular fa-calendar"></i> Sep 18, 2026</span>
+                <span>• 8 min read</span>
+              </div>
+              <h3>Generative AI & Enterprise ROI: Moving Beyond the Hype</h3>
+              <p class="insight-teaser">A rigorous framework for Chief Executive Officers evaluating capital commitment versus scalable margin expansion in artificial intelligence.</p>
+              <button class="insight-read-more open-insight-modal" style="background: none; border: none; font-family: inherit;">Read Summary <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+
+          <article class="insight-card reveal">
+            <div class="insight-image">
+              <img src="assets/images/photo-1492366254240-43affaefc3e3.avif" alt="M&A Synergy Realization Case Study">
+              <span class="insight-category-tag">Case Study</span>
+            </div>
+            <div class="insight-body">
+              <div class="insight-meta">
+                <span><i class="fa-regular fa-calendar"></i> Aug 12, 2026</span>
+                <span>• 15 min read</span>
+              </div>
+              <h3>Unlocking $1.8B Post-Merger Synergies in Global Energy</h3>
+              <p class="insight-teaser">How Stanton Strategy Partners led integration planning across 14 markets following a landmark cross-border energy consolidation.</p>
+              <button class="insight-read-more open-insight-modal" style="background: none; border: none; font-family: inherit;">Read Summary <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deloitte-Inspired Global Financial Centers & Live Clocks -->
+    <section class="section-padding" style="background-color: var(--color-primary); color: var(--color-white);">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="eyebrow">Global Network Hubs</span>
+          <h2 style="color: var(--color-white);">Worldwide Advisory Footprint</h2>
+          <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Connecting C-suite leaders directly with senior managing partners across major international financial markets.</p>
+        </div>
+
+        <div class="global-hubs-grid reveal">
+          <div class="hub-card active">
+            <div class="hub-city">New York</div>
+            <div id="ny-clock" class="hub-clock">00:00:00 AM</div>
+            <div style="font-size: 0.8125rem; color: rgba(255,255,255,0.7); margin-top: 0.75rem;">Global Headquarters • Americas Advisory</div>
+          </div>
+
+          <div class="hub-card">
+            <div class="hub-city">London</div>
+            <div id="london-clock" class="hub-clock">00:00:00 AM</div>
+            <div style="font-size: 0.8125rem; color: rgba(255,255,255,0.7); margin-top: 0.75rem;">EMEA Financial Center • M&A Leadership</div>
+          </div>
+
+          <div class="hub-card">
+            <div class="hub-city">Zurich</div>
+            <div id="zurich-clock" class="hub-clock">00:00:00 AM</div>
+            <div style="font-size: 0.8125rem; color: rgba(255,255,255,0.7); margin-top: 0.75rem;">Private Equity Hub • Wealth & Governance</div>
+          </div>
+
+          <div class="hub-card">
+            <div class="hub-city">Singapore</div>
+            <div id="singapore-clock" class="hub-clock">00:00:00 AM</div>
+            <div style="font-size: 0.8125rem; color: rgba(255,255,255,0.7); margin-top: 0.75rem;">Asia-Pacific Hub • Supply Chain Advisory</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+      <div class="container">
+        <div class="testimonial-carousel reveal">
+          <div class="testimonial-slide active">
+            <p class="testimonial-quote">"Stanton Strategy Partners delivered clarity where others brought complexity. Their rigorous strategic repositioning roadmap allowed us to capture $840M in new market expansion within 18 months."</p>
+            <div class="testimonial-author">
+              <span class="author-name">Arthur Vance</span>
+              <span class="author-title">Chief Executive Officer, Global Energy Holdings</span>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"Their post-merger integration framework was flawless. Stanton's team operated seamlessly alongside our executive board, delivering 130% of projected synergy targets."</p>
+            <div class="testimonial-author">
+              <span class="author-name">Elena Rostova</span>
+              <span class="author-title">Managing Director, Apex Capital Partners</span>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"The level of strategic rigor, independence, and board-level credibility Stanton brings to the table is unmatched by standard advisory firms."</p>
+            <div class="testimonial-author">
+              <span class="author-name">David Sterling</span>
+              <span class="author-title">Chairman of the Board, BioTech Enterprises</span>
+            </div>
+          </div>
+
+          <div class="carousel-nav">
+            <button class="carousel-dot active" data-slide="0" aria-label="Testimonial 1"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="Testimonial 2"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="Testimonial 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-content reveal">
+          <span class="eyebrow light">Accelerate Growth</span>
+          <h2>Ready to Architect Your Strategic Advantage?</h2>
+          <p>Schedule a confidential consultation with our Senior Partners to discuss your organization's highest-priority strategic objectives.</p>
+          <a href="contact.html" class="btn btn-primary">Initiate Strategic Dialogue <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Executive Video Modal -->
+  <div id="video-modal-overlay" class="modal-overlay">
+    <div class="modal-container" style="max-width: 900px; padding: 1.5rem; background: #000;">
+      <button class="modal-close-btn modal-close-trigger" aria-label="Close Video"><i class="fa-solid fa-xmark"></i></button>
+      <video id="modal-video-element" controls style="width: 100%; border-radius: var(--radius-md);">
+        <source src="assets/videos/268230_medium.mp4" type="video/mp4">
+        Your browser does not support html video.
+      </video>
+    </div>
+  </div>
+
+  <!-- Executive Insight Summary Modal -->
+  <div id="insight-modal-overlay" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close-btn modal-close-trigger" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+      <span id="modal-insight-category" class="eyebrow">Publication Summary</span>
+      <h2 id="modal-insight-title" style="font-size: 2rem; margin: 1rem 0;">Executive Briefing Title</h2>
+      <div id="modal-insight-summary" style="font-size: 1.1rem; line-height: 1.7; color: var(--color-text); margin-bottom: 2rem;">
+        Summary content...
+      </div>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="insight-detail.html" class="btn btn-primary">Read Complete Publication <i class="fa-solid fa-file-pdf"></i></a>
+        <button class="btn btn-secondary modal-close-trigger">Close Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Component -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stanton Strategy Partners">
+            <div class="logo-mark">S</div>
+            <div class="brand-name">
+              <span class="brand-title">STANTON</span>
+              <span class="brand-subtitle">STRATEGY PARTNERS</span>
+            </div>
+          </a>
+          <p>Global management consulting firm providing high-stakes corporate strategy, transaction advisory, and digital transformation services to market leaders worldwide.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Capabilities</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#corporate-strategy">Corporate Strategy</a></li>
+            <li><a href="services.html#ma-advisory">M&A Advisory</a></li>
+            <li><a href="services.html#digital-transformation">Digital Transformation</a></li>
+            <li><a href="services.html#operational-excellence">Operational Excellence</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Firm</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Stanton</a></li>
+            <li><a href="approach.html">Our Approach</a></li>
+            <li><a href="about.html#leadership">Leadership Team</a></li>
+            <li><a href="insights.html">Publications & Insights</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Offices</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">New York (Global HQ)</a></li>
+            <li><a href="contact.html">London</a></li>
+            <li><a href="contact.html">Singapore</a></li>
+            <li><a href="contact.html">Zurich</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Executive Insights</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 0.75rem;">Subscribe to our quarterly strategic briefing for chief executives.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Corporate Email..." required>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stanton Strategy Partners LLC. All Rights Reserved.</div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-message" class="toast-message">
+    <i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i>
+    <span class="toast-text">Notification message</span>
+  </div>
+
+  <!-- jQuery & Script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
