@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Stanton Strategy Partners Executive Portal</title>
+  <meta name="description" content="Create your Stanton Strategy Partners executive account to access strategy benchmarks, research briefings, and client advisory tools.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sign Up Page Layout -->
+  <div class="auth-page-wrapper">
+    <div class="auth-card reveal active">
+      
+      <!-- Brand Logo Header -->
+      <a href="index.html" class="auth-brand-header" aria-label="Return to Home">
+        <div class="auth-brand-logo">S</div>
+        <span class="auth-brand-text">Stanton Strategy</span>
+      </a>
+
+      <!-- Headline -->
+      <h1 class="auth-title">Join the Firm</h1>
+      <p class="auth-subtitle">Create your executive advisory account</p>
+
+      <!-- Form -->
+      <form id="signup-form" class="auth-form" novalidate>
+        <div class="auth-field-group">
+          <label for="signup-name" class="auth-label">Full Name</label>
+          <div class="auth-input-wrapper">
+            <input type="text" id="signup-name" class="auth-input" placeholder="Enter your full name" required>
+          </div>
+        </div>
+
+        <div class="auth-field-group">
+          <label for="signup-email" class="auth-label">Email Address</label>
+          <div class="auth-input-wrapper">
+            <input type="email" id="signup-email" class="auth-input" placeholder="Enter your email" required>
+          </div>
+        </div>
+
+        <div class="auth-field-group">
+          <label for="signup-password" class="auth-label">Password</label>
+          <div class="auth-input-wrapper">
+            <input type="password" id="signup-password" class="auth-input" placeholder="••••••••" required>
+            <button type="button" class="auth-password-toggle" aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-field-group">
+          <label for="signup-confirm-password" class="auth-label">Confirm Password</label>
+          <div class="auth-input-wrapper">
+            <input type="password" id="signup-confirm-password" class="auth-input" placeholder="••••••••" required>
+            <button type="button" class="auth-password-toggle" aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-options-row" style="margin-bottom: 1.25rem;">
+          <label class="auth-checkbox-label">
+            <input type="checkbox" id="terms-agree" required checked>
+            <span style="font-size: 0.825rem;">I agree to the <a href="#" class="auth-link">Terms and Conditions</a> and <a href="#" class="auth-link">Privacy Policy</a></span>
+          </label>
+        </div>
+
+        <button type="submit" class="auth-btn-primary">Create Account</button>
+      </form>
+
+      <!-- Social Divider -->
+      <div class="auth-divider">
+        <span>Or sign up with</span>
+      </div>
+
+      <!-- Social Buttons -->
+      <div class="social-grid">
+        <button type="button" class="social-btn" title="Sign up with Google">
+          <i class="fa-brands fa-google" style="color: #ea4335;"></i>
+        </button>
+        <button type="button" class="social-btn" title="Sign up with Apple">
+          <i class="fa-brands fa-apple" style="color: var(--color-primary);"></i>
+        </button>
+        <button type="button" class="social-btn" title="Sign up with Facebook">
+          <i class="fa-brands fa-facebook-f" style="color: #1877f2;"></i>
+        </button>
+      </div>
+
+      <!-- Footer Links -->
+      <p class="auth-footer-text">
+        Already have an account? <a href="signin.html" class="auth-link">Login</a>
+      </p>
+      <p class="auth-footer-text" style="font-size: 0.8rem; margin-top: 0.4rem;">
+        Facing issues? <a href="contact.html" class="auth-link">Contact Support</a>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-message" class="toast">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span class="toast-text">Success message</span>
+  </div>
+
+  <!-- jQuery & Main Script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

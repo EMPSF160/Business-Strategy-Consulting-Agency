@@ -267,4 +267,59 @@ $(document).ready(function () {
     });
   }
 
+  // 11. Password Field Visibility Toggle
+  $(document).on('click', '.auth-password-toggle', function (e) {
+    e.preventDefault();
+    const $input = $(this).siblings('input');
+    const $icon = $(this).find('i');
+
+    if ($input.attr('type') === 'password') {
+      $input.attr('type', 'text');
+      $icon.removeClass('fa-eye').addClass('fa-eye-slash');
+    } else {
+      $input.attr('type', 'password');
+      $icon.removeClass('fa-eye-slash').addClass('fa-eye');
+    }
+  });
+
+  // 12. Sign In & Sign Up Form Handlers
+  $('#signin-form').on('submit', function (e) {
+    e.preventDefault();
+    const email = $('#signin-email').val();
+    const pass = $('#signin-password').val();
+
+    if (email && pass) {
+      showToast('Welcome back! Authentication successful.');
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1500);
+    } else {
+      showToast('Please fill in all required credentials.');
+    }
+  });
+
+  $('#signup-form').on('submit', function (e) {
+    e.preventDefault();
+    const name = $('#signup-name').val();
+    const email = $('#signup-email').val();
+    const pass = $('#signup-password').val();
+    const confirmPass = $('#signup-confirm-password').val();
+
+    if (!name || !email || !pass || !confirmPass) {
+      showToast('Please complete all registration fields.');
+      return;
+    }
+
+    if (pass !== confirmPass) {
+      showToast('Passwords do not match. Please re-enter.');
+      return;
+    }
+
+    showToast('Account created successfully! Welcome to Stanton Strategy Partners.');
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 1500);
+  });
+
 });
+
