@@ -418,31 +418,62 @@ ul {
   transition: var(--transition);
 }
 
-@media (max-width: 992px) {
+.mobile-nav-actions {
+  display: none;
+}
+
+@media (max-width: 1024px) {
   .hamburger {
     display: flex;
   }
 
+  /* Top Bar: Hide action buttons on mobile & tablet so ONLY logo and hamburger are visible */
+  .nav-actions > a {
+    display: none !important;
+  }
+
   .nav-menu {
     position: fixed;
-    top: 76px;
+    top: 72px;
     left: 0;
     right: 0;
-    background-color: var(--color-primary);
+    background-color: rgba(6, 16, 30, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 2.5rem;
-    gap: 1.75rem;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 2.5rem 1.5rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
     transform: translateY(-150%);
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+    z-index: 999;
   }
 
   .nav-menu.active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+
+  /* Mobile/Tablet Hamburger Drawer Actions (Request Consultation & Sign In inside Hamburger Menu) */
+  .mobile-nav-actions {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(56, 189, 248, 0.2);
+  }
+
+  .mobile-nav-actions .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
   }
 }
 
@@ -845,22 +876,22 @@ ul {
    9. Accenture-Inspired Enterprise ROI Calculator WIDGET (CENTER ALIGNED)
    -------------------------------------------------------------------------- */
 .roi-calculator-section {
-  background-color: var(--color-primary);
+  background: linear-gradient(180deg, #06101e 0%, #0f2744 50%, #06101e 100%);
   color: var(--color-white);
-  padding: 7rem 0;
+  padding: 7.5rem 0;
   position: relative;
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  border-top: 1px solid rgba(56, 189, 248, 0.25);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.25);
   text-align: center;
 }
 
 .roi-card {
-  background: rgba(13, 24, 46, 0.85);
-  border: 1px solid var(--color-accent);
+  background: linear-gradient(145deg, rgba(15, 39, 68, 0.95) 0%, rgba(6, 16, 30, 0.98) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
   border-radius: var(--radius-lg);
   padding: 3.5rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 40px rgba(56, 189, 248, 0.15);
+  backdrop-filter: blur(16px);
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -900,8 +931,8 @@ ul {
 .roi-select {
   width: 100%;
   padding: 1rem 1.25rem;
-  background-color: rgba(6, 12, 24, 0.95);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background-color: rgba(6, 16, 30, 0.95);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   color: var(--color-white);
   border-radius: var(--radius-sm);
   font-family: var(--font-sans);
@@ -917,7 +948,7 @@ ul {
 }
 
 .roi-result-box {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18) 0%, rgba(6, 12, 24, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18) 0%, rgba(6, 16, 30, 0.95) 100%);
   border: 1px solid var(--color-accent);
   border-radius: var(--radius-md);
   padding: 3rem 2rem;
@@ -949,8 +980,8 @@ ul {
    10. Strategy&-Inspired Workflow Timeline (CENTER ALIGNED)
    -------------------------------------------------------------------------- */
 .workflow-section {
-  padding: 7rem 0;
-  background-color: var(--color-light);
+  padding: 7.5rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
   text-align: center;
 }
 
@@ -965,7 +996,7 @@ ul {
 .workflow-tab-btn {
   padding: 1rem 2.25rem;
   background: #ffffff;
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   border-radius: var(--radius-full);
   font-family: var(--font-sans);
   font-size: 0.9375rem;
@@ -973,11 +1004,11 @@ ul {
   color: var(--color-text);
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(4, 9, 20, 0.04);
+  box-shadow: 0 4px 15px rgba(6, 16, 30, 0.04);
 }
 
 .workflow-tab-btn:hover, .workflow-tab-btn.active {
-  background: linear-gradient(135deg, #0b162c 0%, #040914 100%);
+  background: linear-gradient(135deg, #0f2744 0%, #06101e 100%);
   color: var(--color-accent);
   border-color: var(--color-accent);
   box-shadow: var(--shadow-gold);
@@ -986,11 +1017,11 @@ ul {
 
 .workflow-card {
   display: none;
-  background: linear-gradient(145deg, #ffffff 0%, #fdfbf7 100%);
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   padding: 4rem;
-  box-shadow: 0 25px 60px rgba(4, 9, 20, 0.08), 0 0 25px rgba(212, 175, 55, 0.12);
+  box-shadow: 0 25px 60px rgba(6, 16, 30, 0.08), 0 0 25px rgba(56, 189, 248, 0.12);
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
   align-items: center;
@@ -1001,18 +1032,11 @@ ul {
   display: grid;
 }
 
-@media (max-width: 992px) {
-  .workflow-card {
-    grid-template-columns: 1fr;
-    padding: 2.5rem;
-  }
-}
-
 .workflow-num {
   font-family: var(--font-serif);
   font-size: 4.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #aa771c 100%);
+  background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
@@ -1033,21 +1057,21 @@ ul {
 .filter-btn {
   padding: 0.65rem 1.6rem;
   background: #ffffff;
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   border-radius: var(--radius-full);
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--color-text-muted);
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(4, 9, 20, 0.04);
+  box-shadow: 0 4px 15px rgba(6, 16, 30, 0.04);
 }
 
 .filter-btn.active, .filter-btn:hover {
-  background: linear-gradient(135deg, #fce899 0%, #d4af37 50%, #b38728 100%);
-  color: #040914;
-  border-color: #ffe99b;
-  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%);
+  color: #020712;
+  border-color: #bae6fd;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
 }
 
 .insights-row {
@@ -1057,29 +1081,23 @@ ul {
   justify-content: center;
 }
 
-@media (max-width: 992px) {
-  .insights-row {
-    grid-template-columns: 1fr;
-  }
-}
-
 .insight-card {
-  background: linear-gradient(145deg, #ffffff 0%, #fdfbf7 100%);
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.28);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 14px 35px rgba(4, 9, 20, 0.06), inset 0 1px 0 #ffffff;
+  box-shadow: 0 14px 35px rgba(6, 16, 30, 0.06), inset 0 1px 0 #ffffff;
 }
 
 .insight-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 55px rgba(4, 9, 20, 0.12), 0 0 35px rgba(212, 175, 55, 0.28);
-  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 25px 55px rgba(6, 16, 30, 0.12), 0 0 35px rgba(56, 189, 248, 0.28);
+  border-color: rgba(56, 189, 248, 0.7);
 }
 
 .insight-image {
@@ -1166,7 +1184,7 @@ ul {
 .modal-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(3, 7, 15, 0.88);
+  background-color: rgba(2, 7, 18, 0.9);
   backdrop-filter: blur(12px);
   z-index: 2000;
   display: flex;
@@ -1225,21 +1243,9 @@ ul {
   justify-content: center;
 }
 
-@media (max-width: 992px) {
-  .global-hubs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .global-hubs-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .hub-card {
-  background: linear-gradient(145deg, #0b162c 0%, #040914 100%);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: linear-gradient(145deg, #0f2744 0%, #06101e 100%);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   border-radius: var(--radius-md);
   padding: 2rem 1.5rem;
   color: var(--color-white);
@@ -1252,7 +1258,7 @@ ul {
 .hub-card:hover, .hub-card.active {
   border-color: var(--color-accent);
   transform: translateY(-6px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.35);
 }
 
 .hub-city {
@@ -1281,25 +1287,13 @@ ul {
   align-items: start;
 }
 
-@media (max-width: 992px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .contact-form-card {
-  background: linear-gradient(145deg, #ffffff 0%, #fdfbf7 100%);
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
   border-radius: var(--radius-lg);
   padding: 3.5rem;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  box-shadow: 0 25px 60px rgba(4, 9, 20, 0.08), 0 0 25px rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 25px 60px rgba(6, 16, 30, 0.08), 0 0 25px rgba(56, 189, 248, 0.1);
   text-align: center;
-}
-
-@media (max-width: 576px) {
-  .contact-form-card {
-    padding: 2rem;
-  }
 }
 
 .form-group {
@@ -1333,7 +1327,7 @@ ul {
   outline: none;
   border-color: var(--color-accent);
   background-color: var(--color-white);
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.22);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);
 }
 
 .error-message {
@@ -1357,12 +1351,12 @@ ul {
    14. CTA Banner (CENTER ALIGNED)
    -------------------------------------------------------------------------- */
 .cta-banner {
-  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.22) 0%, transparent 70%),
-              linear-gradient(135deg, #040914 0%, #0b162c 50%, #040914 100%);
+  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.22) 0%, transparent 70%),
+              linear-gradient(135deg, #06101e 0%, #0f2744 50%, #06101e 100%);
   color: var(--color-white);
   padding: 6.5rem 0;
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  border-top: 1px solid rgba(56, 189, 248, 0.3);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.3);
   text-align: center;
 }
 
@@ -1393,46 +1387,54 @@ ul {
    15. Footer Section (CENTER ALIGNED)
    -------------------------------------------------------------------------- */
 .site-footer {
-  background: linear-gradient(180deg, #040914 0%, #02050b 100%);
+  background: linear-gradient(180deg, #06101e 0%, #020712 100%);
   color: rgba(255, 255, 255, 0.78);
   padding: 6.5rem 0 3.5rem 0;
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  border-top: 1px solid rgba(56, 189, 248, 0.3);
   text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   15. Footer Section (LEFT ALIGNED COLUMNS & PERFECT INTEGRATED FORM)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: linear-gradient(180deg, #06101e 0%, #020712 100%);
+  color: rgba(255, 255, 255, 0.78);
+  padding: 6.5rem 0 3.5rem 0;
+  border-top: 1px solid rgba(56, 189, 248, 0.3);
+  text-align: left;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr repeat(3, 1fr) 1.2fr;
+  grid-template-columns: 1.5fr repeat(3, 1fr) 1.3fr;
   gap: 3rem;
   margin-bottom: 4rem;
-  text-align: center;
-  justify-content: center;
-}
-
-@media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 576px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
+  text-align: left;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-brand p {
+  text-align: left;
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.65;
 }
 
 .footer-col {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .footer-col h4 {
@@ -1443,71 +1445,126 @@ ul {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 1.75rem;
-  text-align: center;
+  text-align: left;
+}
+
+.footer-col p {
+  text-align: left;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-links li {
   margin-bottom: 0.85rem;
-  text-align: center;
+  text-align: left;
 }
 
 .footer-links a {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9375rem;
-  text-align: center;
+  text-align: left;
+  transition: var(--transition);
 }
 
 .footer-links a:hover {
   color: var(--color-accent);
+  padding-left: 4px;
 }
 
+/* Integrated Newsletter Form */
 .newsletter-form {
   display: flex;
-  gap: 0.5rem;
-  max-width: 320px;
+  align-items: center;
+  position: relative;
   width: 100%;
-  margin: 0 auto;
+  max-width: 320px;
+  margin-top: 0.5rem;
 }
 
 .newsletter-input {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 3.2rem 0.85rem 1.25rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-  text-align: center;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(6, 16, 30, 0.85);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  text-align: left;
+  outline: none;
+  transition: var(--transition);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.newsletter-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+}
+
+.newsletter-form button,
+.newsletter-btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%) !important;
+  color: #020712 !important;
+  border: none !important;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4) !important;
+  transition: var(--transition) !important;
+  margin: 0 !important;
+}
+
+.newsletter-form button:hover,
+.newsletter-btn:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #7dd3fc 50%, #38bdf8 100%) !important;
+  transform: translateY(-50%) scale(1.08) !important;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.6) !important;
 }
 
 .footer-bottom {
   padding-top: 2.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 0.875rem;
   gap: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .social-links {
   display: flex;
-  gap: 1.25rem;
-  justify-content: center;
+  gap: 1rem;
+  justify-content: flex-end;
 }
 
 .social-link {
   width: 40px;
   height: 40px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   color: var(--color-accent);
   border-radius: var(--radius-full);
   display: flex;
@@ -1518,28 +1575,28 @@ ul {
 
 .social-link:hover {
   background: var(--color-accent);
-  color: var(--color-primary-dark);
+  color: #020712;
   transform: translateY(-3px);
 }
 
 /* Article Detail & Takeaway Box Styling */
 .insight-detail-header {
-  background: radial-gradient(circle at 50% 10%, rgba(212, 175, 55, 0.2) 0%, transparent 65%),
-              linear-gradient(180deg, #040914 0%, #0b162c 100%);
+  background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.2) 0%, transparent 65%),
+              linear-gradient(180deg, #06101e 0%, #0f2744 100%);
   padding: 10rem 0 6rem 0;
   color: var(--color-white);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.3);
   text-align: center;
 }
 
 .takeaway-box {
-  background: linear-gradient(145deg, #ffffff 0%, #fdfbf7 100%);
-  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
   border-left: 4px solid var(--color-accent);
   border-radius: var(--radius-md);
   padding: 2.5rem;
   margin: 3rem 0;
-  box-shadow: 0 20px 45px rgba(4, 9, 20, 0.08), 0 0 25px rgba(212, 175, 55, 0.12);
+  box-shadow: 0 20px 45px rgba(6, 16, 30, 0.08), 0 0 25px rgba(56, 189, 248, 0.12);
   text-align: left;
 }
 
@@ -1607,7 +1664,7 @@ ul {
   align-items: center;
   padding: 3rem 1.5rem;
   background: var(--color-primary);
-  background-image: radial-gradient(circle at 50% 10%, rgba(212, 175, 55, 0.15) 0%, rgba(6, 12, 24, 0.95) 75%);
+  background-image: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.15) 0%, rgba(6, 16, 30, 0.95) 75%);
 }
 
 .auth-card {
@@ -1616,7 +1673,7 @@ ul {
   background: #ffffff;
   border-radius: 20px;
   padding: 2.75rem 2.25rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(56, 189, 248, 0.15);
   border: 1px solid var(--color-border-gold);
   text-align: center;
   transition: var(--transition);
@@ -1635,8 +1692,8 @@ ul {
   width: 42px;
   height: 42px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, #d4af37 0%, #8c5d14 100%);
-  color: var(--color-primary-dark);
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  color: #020712;
   font-family: var(--font-serif);
   display: flex;
   align-items: center;
@@ -1870,5 +1927,118 @@ ul {
 .btn-nav-auth:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
-  background: rgba(212, 175, 55, 0.08);
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* ==========================================================================
+   17. Fit to Screen & Mobile/Tablet Centered Grid Engine
+   (Tablet: 2/1 Centered Grids | Mobile: 1/1/1 Centered Stack | Zero Horizontal Sway)
+   ========================================================================== */
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container, section, header, footer, article, div {
+  box-sizing: border-box;
+}
+
+/* Tablet View (641px to 1024px): 2/1 Centered Layout */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .services-grid,
+  .stat-grid,
+  .insights-row,
+  .global-hubs-grid,
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* 2/1 Centered Layout: Third or odd last card spans across and centers */
+  .insights-row > article:nth-child(odd):last-child,
+  .services-grid > div:nth-child(odd):last-child,
+  .global-hubs-grid > div:nth-child(odd):last-child {
+    grid-column: 1 / -1 !important;
+    max-width: 520px !important;
+    width: 100% !important;
+    justify-self: center !important;
+    margin: 0 auto !important;
+  }
+
+  .workflow-card {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2.5rem !important;
+    padding: 3rem !important;
+  }
+
+  .contact-grid,
+  .roi-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+}
+
+/* Mobile View (max-width: 640px): 1/1/1 Vertical Stack & Centered */
+@media (max-width: 640px) {
+  body, .container, section {
+    text-align: center !important;
+  }
+
+  .container {
+    padding: 0 1.25rem !important;
+    width: 100% !important;
+  }
+
+  .services-grid,
+  .stat-grid,
+  .insights-row,
+  .global-hubs-grid,
+  .footer-grid,
+  .workflow-card,
+  .contact-grid,
+  .roi-grid,
+  .social-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .insights-row > article:nth-child(odd):last-child,
+  .services-grid > div:nth-child(odd):last-child,
+  .global-hubs-grid > div:nth-child(odd):last-child {
+    grid-column: 1 / -1 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .workflow-card {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .roi-card {
+    padding: 2rem 1.25rem !important;
+  }
+
+  .contact-form-card {
+    padding: 2rem 1.25rem !important;
+  }
+
+  .auth-card {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem !important;
+  }
+
+  .section-header h2 {
+    font-size: 1.85rem !important;
+  }
 }
