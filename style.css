@@ -2041,4 +2041,35 @@ html, body {
   .section-header h2 {
     font-size: 1.85rem !important;
   }
+
+  /* Mobile Footer Center Overrides */
+  .site-footer,
+  .footer-grid,
+  .footer-brand,
+  .footer-col,
+  .footer-links {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-col h4,
+  .footer-brand p,
+  .footer-links a,
+  .footer-col p {
+    text-align: center !important;
+  }
+
+  .newsletter-form {
+    margin: 0 auto !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .social-links {
+    justify-content: center !important;
+  }
 }
