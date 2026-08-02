@@ -64,6 +64,7 @@ $(document).ready(function () {
   // 4. Scroll-Triggered Fade-In Reveal Animations
   const revealElements = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealElements.length > 0) {
+    document.documentElement.classList.add('js-reveal');
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -71,7 +72,7 @@ $(document).ready(function () {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.05 });
 
     revealElements.forEach(el => revealObserver.observe(el));
   } else {
