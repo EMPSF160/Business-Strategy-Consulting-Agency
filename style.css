@@ -1057,6 +1057,10 @@ ul {
   text-align: left;
 }
 
+.workflow-card > div:first-child {
+  text-align: left !important;
+}
+
 .workflow-card.active {
   display: grid;
 }
@@ -1069,7 +1073,14 @@ ul {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
-  text-align: left;
+  text-align: left !important;
+  display: block !important;
+  margin-bottom: 0.5rem;
+}
+
+.workflow-card h3,
+.workflow-card p {
+  text-align: left !important;
 }
 
 .workflow-card ul {
@@ -1078,7 +1089,7 @@ ul {
   margin: 1.5rem 0;
   font-weight: 600;
   color: var(--color-primary);
-  text-align: left;
+  text-align: left !important;
 }
 
 .workflow-card li {
@@ -1086,7 +1097,7 @@ ul {
   align-items: flex-start;
   gap: 0.6rem;
   margin-bottom: 0.75rem;
-  text-align: left;
+  text-align: left !important;
 }
 
 .workflow-card li:last-child {
@@ -2152,30 +2163,40 @@ html, body {
   .principles-grid,
   .leadership-grid,
   .stat-grid,
-  .insights-row,
-  .global-hubs-grid,
-  .engagement-matrix-grid {
+  .global-hubs-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 2rem !important;
     align-items: stretch !important;
   }
 
-  .leadership-grid .service-card {
+  .insights-row,
+  .engagement-matrix-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+    align-items: stretch !important;
+  }
+
+  .leadership-grid .service-card,
+  .leadership-grid .partner-card {
     height: 100% !important;
     min-height: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     box-sizing: border-box !important;
-    text-align: center !important;
   }
 
-  .leadership-grid .service-card img {
+  .leadership-grid .service-card img,
+  .partner-img-wrapper {
     width: 100% !important;
-    height: 220px !important;
+    height: 280px !important;
+  }
+
+  .partner-img-wrapper img {
     object-fit: cover !important;
-    border-radius: var(--radius-sm) !important;
+    object-position: center 25% !important;
   }
 
   /* Force equal height & consistent width across all cards in Tablet view */
@@ -2190,12 +2211,10 @@ html, body {
     box-sizing: border-box !important;
   }
 
-  /* 3rd card in 2-column grid spans full width with equal height styling */
-  .insights-row > article:nth-child(odd):last-child,
+  /* Only 2-column grids with odd last child span 2 columns */
   .services-grid > div:nth-child(odd):last-child,
   .principles-grid > div:nth-child(odd):last-child,
-  .global-hubs-grid > div:nth-child(odd):last-child,
-  .engagement-matrix-grid > div:nth-child(odd):last-child {
+  .global-hubs-grid > div:nth-child(odd):last-child {
     grid-column: 1 / -1 !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -2290,18 +2309,23 @@ html, body {
     width: 100% !important;
   }
 
-  .leadership-grid .service-card {
+  .leadership-grid .service-card,
+  .leadership-grid .partner-card {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
     padding: 1.5rem 1.25rem !important;
   }
 
-  .leadership-grid .service-card img {
+  .leadership-grid .service-card img,
+  .partner-img-wrapper {
     width: 100% !important;
-    height: 250px !important;
+    height: 320px !important;
+  }
+
+  .partner-img-wrapper img {
     object-fit: cover !important;
-    border-radius: var(--radius-sm) !important;
+    object-position: center 25% !important;
   }
 
   /* Mobile Card Equal Height Box Sizing */
@@ -2510,4 +2534,104 @@ html, body {
     object-fit: cover !important;
     border-radius: var(--radius-md) !important;
   }
+
+  .video-callout-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
 }
+
+/* --------------------------------------------------------------------------
+   Special Section Layout & Alignment Enhancements
+   -------------------------------------------------------------------------- */
+
+/* Testimonial Section Padding */
+.testimonial-section {
+  padding-top: 5.5rem !important;
+  padding-bottom: 5.5rem !important;
+}
+
+/* Video Callout Grid Desktop Layout */
+.video-callout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Engagement Card Deliverables Text Alignment */
+.engagement-card p {
+  min-height: 4.5rem;
+}
+
+/* Service Detail Section Text & Badge Left Alignment */
+.service-detail-section h2,
+.service-detail-section p,
+.service-detail-section h4 {
+  text-align: left !important;
+}
+
+/* Partner Executive Card Design & Top-Cropped Headshots */
+.partner-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(6, 16, 30, 0.04);
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(6, 16, 30, 0.1), 0 0 25px rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.partner-img-wrapper {
+  width: 100% !important;
+  height: 300px !important;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  position: relative;
+  background: #06101e;
+}
+
+.partner-img-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 25% !important; /* Perfectly centers executive face and shoulders */
+  transition: transform 0.5s ease;
+}
+
+.partner-card:hover .partner-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Executive Leadership Grid 4-Column Webview Rule */
+.leadership-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 2rem !important;
+}
+
+@media (max-width: 1024px) {
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .leadership-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+}
+
+
+
+
